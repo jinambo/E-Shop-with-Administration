@@ -236,3 +236,11 @@ body {
 .admin-panel__reviews > .row:nth-child(odd) {
     background-color: #fff;
 }
+
+.admin-panel__form {
+    display: none;
+}
+
+.admin-panel__form--active {
+    display: block !important;
+}
