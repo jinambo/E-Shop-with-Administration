@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jinambo/UNIVERSITY/www/semestral_project/Eshop_ASP-main 2/eshop_srytr/eshop_srytr.csproj": {}
+    "/Users/jinambo/UNIVERSITY/www/semestral_project/Srytr_PW/eshop_srytr/eshop_srytr.csproj": {}
   },
   "projects": {
-    "/Users/jinambo/UNIVERSITY/www/semestral_project/Eshop_ASP-main 2/eshop_srytr/eshop_srytr.csproj": {
+    "/Users/jinambo/UNIVERSITY/www/semestral_project/Srytr_PW/eshop_srytr/eshop_srytr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jinambo/UNIVERSITY/www/semestral_project/Eshop_ASP-main 2/eshop_srytr/eshop_srytr.csproj",
+        "projectUniqueName": "/Users/jinambo/UNIVERSITY/www/semestral_project/Srytr_PW/eshop_srytr/eshop_srytr.csproj",
         "projectName": "eshop_srytr",
-        "projectPath": "/Users/jinambo/UNIVERSITY/www/semestral_project/Eshop_ASP-main 2/eshop_srytr/eshop_srytr.csproj",
+        "projectPath": "/Users/jinambo/UNIVERSITY/www/semestral_project/Srytr_PW/eshop_srytr/eshop_srytr.csproj",
         "packagesPath": "/Users/jinambo/.nuget/packages/",
-        "outputPath": "/Users/jinambo/UNIVERSITY/www/semestral_project/Eshop_ASP-main 2/eshop_srytr/obj/",
+        "outputPath": "/Users/jinambo/UNIVERSITY/www/semestral_project/Srytr_PW/eshop_srytr/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jinambo/.config/NuGet/NuGet.Config"

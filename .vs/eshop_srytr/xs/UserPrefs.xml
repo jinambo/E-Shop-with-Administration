@@ -1,21 +1,24 @@
 ﻿<Properties StartupConfiguration="{4BE7DE88-7471-4D70-B03E-2C84B236A499}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/Admin/Views/Product/Select.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="Controllers/ProductController.cs" Line="6" Column="37" IsPinned="True" />
-      <File FileName="wwwroot/css/site.css" Line="245" Column="31" IsPinned="True" />
-      <File FileName="Views/Product/Index.cshtml" Line="91" Column="29" />
-      <File FileName="Views/Home/Index.cshtml" />
-      <File FileName="Areas/Admin/Views/Carousel/Select.cshtml" Line="1" Column="1" />
-      <File FileName="Areas/Admin/Views/Product/Select.cshtml" Line="82" Column="57" />
+      <File FileName="Controllers/ProductController.cs" Line="15" Column="41" IsPinned="True" />
+      <File FileName="wwwroot/css/site.css" Line="9" Column="2" IsPinned="True" />
+      <File FileName="Views/Product/Index.cshtml" Line="270" Column="22" />
+      <File FileName="Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/Admin/Views/Carousel/Select.cshtml" />
+      <File FileName="Areas/Admin/Views/Product/Select.cshtml" />
+      <File FileName="Areas/Customer/Controllers/CustomerOrderNotCartController.cs" Line="33" Column="1" />
       <File FileName="Areas/Admin/Controllers/CarouselController.cs" Line="116" Column="13" NotebookId="1" IsPinned="True" />
       <File FileName="Models/Database/Entity/Order.cs" NotebookId="1" />
-      <File FileName="Models/Database/Entity/Review.cs" Line="36" Column="43" NotebookId="1" />
-      <File FileName="Models/Database/Entity/ProductItem.cs" NotebookId="1" />
+      <File FileName="Models/Database/Entity/Review.cs" NotebookId="1" />
+      <File FileName="Models/Database/Entity/ProductItem.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Models/ViewModels/ProductViewModel.cs" NotebookId="1" />
       <File FileName="Models/ViewModels/IndexViewModel.cs" NotebookId="1" />
       <File FileName="Models/ViewModels/LoginViewModel.cs" NotebookId="1" />
-      <File FileName="Areas/Admin/Controllers/ProductController.cs" Line="195" Column="1" NotebookId="1" />
-      <File FileName="Areas/Admin/Controllers/OrdersController.cs" Line="11" Column="22" NotebookId="1" />
+      <File FileName="Areas/Admin/Controllers/ProductController.cs" Line="201" Column="18" NotebookId="1" />
+      <File FileName="Areas/Admin/Controllers/OrdersController.cs" NotebookId="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="78" Column="56" NotebookId="1" />
+      <File FileName="Views/Home/Privacy.cshtml" Line="1" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,10 +30,11 @@
                   <Node name="Controllers" expanded="True" />
                   <Node name="Views" expanded="True">
                     <Node name="Carousel" expanded="True" />
-                    <Node name="Product" expanded="True">
-                      <Node name="Select.cshtml" selected="True" />
-                    </Node>
+                    <Node name="Product" expanded="True" />
                   </Node>
+                </Node>
+                <Node name="Customer" expanded="True">
+                  <Node name="Controllers" expanded="True" />
                 </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
@@ -44,7 +48,9 @@
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
                 <Node name="Product" expanded="True" />
-                <Node name="Shared" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />

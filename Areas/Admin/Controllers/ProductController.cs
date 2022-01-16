@@ -52,6 +52,9 @@ namespace eshop_srytr.Areas.Admin.Controllers
                 FileUpload fileUpload = new FileUpload(env.WebRootPath, "img/ProductItems", "image");
                 productItem.ImageSource = await fileUpload.FileUploadAsync(productItem.Image);
 
+                productItem.Reviews = new List<Review>();
+                productItem.ProductRating = 0;
+
                 if (String.IsNullOrWhiteSpace(productItem.ImageSource) == false)
                 {
 

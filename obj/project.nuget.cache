@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VvwKTfXWsQPOX+acEgJh71Ji9EaO5corjNb7fLrOmar+BCOKer0D4I6GYJ58U9hQQBjt84oQrxjbHRcrMTTj1A==",
+  "dgSpecHash": "sAR/YvDzY/xSYYDhwoBmwAbbETIlSkSCLoaAqS+FfKdllWmMVBqhHxRoz0068XBxCVi+aWgT+ga0cD3+g/bOGA==",
   "success": true,
-  "projectFilePath": "/Users/jinambo/UNIVERSITY/www/semestral_project/Eshop_ASP-main 2/eshop_srytr/eshop_srytr.csproj",
+  "projectFilePath": "/Users/jinambo/UNIVERSITY/www/semestral_project/Srytr_PW/eshop_srytr/eshop_srytr.csproj",
   "expectedPackageFiles": [
     "/Users/jinambo/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/jinambo/.nuget/packages/microsoft.aspnetcore.cryptography.internal/5.0.12/microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",

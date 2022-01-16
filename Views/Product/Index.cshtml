@@ -96,8 +96,9 @@
 
                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
                 <div class="d-flex">
-                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                    <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
+                    <button class="btn btn-outline-dark flex-shrink-0" type="button"
+                            onclick="Buy(@Model.ProductItem.ID,'@Url.Action("AddOrderItemsToSession", "CustomerOrderNotCart", new { Area = "Customer" })', '#total_price', '@System.Globalization.CultureInfo.CurrentCulture.Name')">
                         <i class="bi-cart-fill me-1"></i>
                         Add to cart
                     </button>
@@ -118,7 +119,8 @@
                     foreach (var review in Model.ProductItem.Reviews)
                     {
                         <div class="reviews__item col-md-8 border rounded p-3 mt-3 bg-white">
-                            @if (review.UserName == User.Identity.Name) {
+                            @if (review.UserName == User.Identity.Name)
+                            {
                                 <a class="reviews__edit" asp-action="DeleteReview" asp-route-ID="@review.ID">
                                     <img src="~/img/delete.svg" />
                                 </a>
@@ -255,18 +257,30 @@
 
 
 
-@if (Model.state == "chyba")
-{
-    @section Scripts {
+
+@section Scripts {
+    @if (Model.state == "chyba")
+    {
         <script>
             const alert = document.querySelector(".rating-alert");
 
-            alert.classList.add('show-alert')
+            alert.classList.add('show-alert');
 
             setTimeout(() => {
-                alert.classList.remove('show-alert')
-            }, 4000)
+                alert.classList.remove('show-alert');
+            }, 4000);
         </script>
     }
+
+    <environment include="Development">
+        <script src="~/js/Product.js"></script>
+    </environment>
+
+    <environment exclude="Development">
+        <script src="~/js/Product.min.js"></script>
+    </environment>
 }
+
+
+
 

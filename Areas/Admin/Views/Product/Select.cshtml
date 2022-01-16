@@ -66,63 +66,69 @@
                             <div class="col-4">Comment</div>
                             <div class="col-3 text-right">Action</div>
                         </div>
-                        @foreach (var review in Model[i].Reviews)
-                        {
-                        <div class="admin-panel__review row rounded mt-2 px-4 py-2">
-                            <div class="col-1">@review.ID</div>
-                            <div class="col-2">@review.UserName</div>
-                            <div class="col-2">
-                                <div class="rating rating--sm">
-                                    <div class="rating__stars">
-                                        <meter class="rating__score" value="@review.ReviewRating" min="0" max="5"></meter>
+                        @{
+                            if (Model[i].Reviews != null && Model[i].Reviews.Count() > 0)
+                            {
+                                @foreach (var review in Model[i].Reviews)
+                                {
+                                    <div class="admin-panel__review row rounded mt-2 px-4 py-2">
+                                        <div class="col-1">@review.ID</div>
+                                        <div class="col-2">@review.UserName</div>
+                                        <div class="col-2">
+                                            <div class="rating rating--sm">
+                                                <div class="rating__stars">
+                                                    <meter class="rating__score" value="@review.ReviewRating" min="0" max="5"></meter>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">@review.ReviewComment</div>
+                                        <div class="col-3 text-right">
+                                            <a class="admin-panel__edit btn btn-primary">
+                                                <i class="bi bi-pencil-fill"></i>
+                                            </a>
+                                            <a asp-action="ToggleReview" asp-route-ID="@review.ID" class="btn @(review.IsVisible ? "btn-warning" : "btn-secondary")">
+                                                @{
+                                                    if (review.IsVisible)
+                                                    {
+                                                        <i class="bi bi-eye-slash-fill"></i>
+                                                    }
+                                                    else
+                                                    {
+                                                        <i class="bi bi-eye"></i>
+                                                    }
+                                                }
+                                            </a>
+                                            <a asp-action="DeleteReview" asp-route-ID="@review.ID" class="btn btn-danger">
+                                                <i class="bi bi-trash-fill"></i>
+                                            </a>
+                                        </div>
+
+                                        <!-- edit form -->
+                                        <div class="admin-panel__form col-12 mt-1 px-4 py-2">
+
+                                            <form asp-action="EditReview" method="post" enctype="multipart/form-data">
+                                                <input asp-for="@review.ID" type="hidden" value="@review.ID" />
+                                                <input asp-for="@review.UserId" type="hidden" value="@review.UserId">
+                                                <input asp-for="@review.ProductId" type="hidden" value="@review.ProductId">
+
+                                                <div class="form-group">
+                                                    <label asp-for="@review.ReviewRating">Rating</label>
+                                                    <input asp-for="@review.ReviewRating" class="form-control" value="@review.ReviewRating" />
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label asp-for="@review.ReviewComment">Comment</label>
+                                                    <textarea asp-for="@review.ReviewComment" class="form-control" rows="5" value="@review.ReviewComment"></textarea>
+                                                </div>
+
+                                                <button type="submit" class="btn btn-primary">Done</button>
+                                            </form>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-4">@review.ReviewComment</div>
-                            <div class="col-3 text-right">
-                                <a class="admin-panel__edit btn btn-primary">
-                                    <i class="bi bi-pencil-fill"></i>
-                                </a>
-                                <a asp-action="ToggleReview" asp-route-ID="@review.ID" class="btn @(review.IsVisible ? "btn-warning" : "btn-secondary")">
-                                    @{
-                                        if (review.IsVisible)
-                                        {
-                                            <i class="bi bi-eye-slash-fill"></i>
-                                        }
-                                        else
-                                        {
-                                            <i class="bi bi-eye"></i>
-                                        }
-                                    }
-                                </a>
-                                <a asp-action="DeleteReview" asp-route-ID="@review.ID" class="btn btn-danger">
-                                    <i class="bi bi-trash-fill"></i>
-                                </a>
-                            </div>
-
-                            <!-- edit form -->
-                            <div class="admin-panel__form col-12 mt-1 px-4 py-2">
-
-                                <form asp-action="EditReview" method="post" enctype="multipart/form-data">
-                                    <input asp-for="@review.ID" type="hidden" value="@review.ID" />
-                                    <input asp-for="@review.UserId" type="hidden" value="@review.UserId">
-                                    <input asp-for="@review.ProductId" type="hidden" value="@review.ProductId">
-
-                                    <div class="form-group">
-                                        <label asp-for="@review.ReviewRating">Rating</label>
-                                        <input asp-for="@review.ReviewRating" class="form-control" value="@review.ReviewRating" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label asp-for="@review.ReviewComment">Comment</label>
-                                        <textarea asp-for="@review.ReviewComment" class="form-control" rows="5" value="@review.ReviewComment"></textarea>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary">Done</button>
-                                </form>
-                            </div>
-                        </div>
+                                }
+                            }
                         }
+
                     </div>
                 </div>
             }
